@@ -101,12 +101,6 @@ class Classify:
 
 if __name__ == '__main__':
     
-    doc_topic = np.load("doc_topic.npy")
-    classes = np.load("classes.npy")
-    CLY = Classify()
-    CLY.classify_pro(doc_topic, classes)
-    sys.exit()
-
     DT = Data()
     data, classes = DT.processData(sys.argv[1])
     np.save("data.npy", data)
